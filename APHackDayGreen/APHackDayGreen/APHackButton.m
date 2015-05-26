@@ -17,7 +17,7 @@
         [self setTitleColor : [UIColor darkGrayColor] forState : UIControlStateNormal];
         [[self titleLabel] setFont : [UIFont fontWithName : @"APLetter-Regular" size : 15]];
         [[self titleLabel] setTextAlignment : NSTextAlignmentCenter];
-        [[self titleLabel] setNumberOfLines : 2];
+        [[self titleLabel] setNumberOfLines : 1];
         [[self imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
     }
     return self;
