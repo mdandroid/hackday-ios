@@ -8,12 +8,13 @@
 
 #import "HomeViewController.h"
 #import "DetailViewController.h"
+#import "TTTAttributedLabel.h"
 
 @interface HomeViewController ()
 
-@property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong) UIButton *button;
-
+@property (nonatomic, strong) TTTAttributedLabel *label;
+@property (nonatomic, strong) UIButton *okButton;
+@property (nonatomic, strong) UIButton *waitMoreButton;
 
 @end
 
@@ -22,28 +23,57 @@
 - (void)loadView {
     [super loadView];
 
-    self.label = [[UILabel alloc]initWithFrame:CGRectZero];
+    self.label = [[TTTAttributedLabel alloc]initWithFrame:CGRectZero];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    self.label.backgroundColor = [UIColor greenColor];
+   // self.label.backgroundColor = [UIColor greenColor];
     self.label.textColor = [UIColor blackColor];
     self.label.translatesAutoresizingMaskIntoConstraints = NO;
-    self.label.textAlignment = NSTextAlignmentCenter;
+    //self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.numberOfLines = 0;
+    self.label.lineBreakMode = NSLineBreakByWordWrapping;
     [self.label sizeToFit];
     
-    self.label.text = @"Hello World";
+    
+    NSString *message = @"Hi Sam!\n\n Your parcel from ASOS will be delivered to your Home address today between 12pm - 3pm.";
+    
+    NSRange rangeOfSender = [message rangeOfString:@"ASOS"];
+    NSRange rangeOfAddress = [message rangeOfString:@"Home"];
     
     
-    self.button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [self.button setTitle:@"Next" forState:UIControlStateNormal];
-    [self.view addSubview:self.button];
-    [self.button addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
-    self.button.translatesAutoresizingMaskIntoConstraints = NO;
+    UIFont *mainFont = [UIFont fontWithName:@"APLetter-Regular" size:14.f];;
+    NSMutableAttributedString *aString = [[NSMutableAttributedString alloc]initWithString:message];
+    
+    [aString addAttribute:NSFontAttributeName value:mainFont range:NSMakeRange(0, aString.length)];
+ //   [aString addAttribute:NSFontAttributeName value:[UIFont boldHelveticaFontOfSize:14.f] range:rangeOfPin];
+//    aString addAttribute:NSUnderlineStyleAttributeName value:<#(id)#> range:<#(NSRange)#>
+//    [aString addAttribute:NSForegroundColorAttributeName  value:[UIColor colorWithHexValue:APColourTextFieldBorder] range:NSMakeRange(0, aString.length)];
+//    self.helpInstructionsLabel.attributedText = aString;
+    self.label.attributedText = aString;
+    
+    
+ //   self.label.attributedText = @"Hi Sam!\n\n Your parcel from ASOS will be delivered to your Home address today between 12pm - 3pm.";
+    
+    
+    self.okButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.okButton setTitle:@"OK, I'm home" forState:UIControlStateNormal];
+    [self.view addSubview:self.okButton];
+    [self.okButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
+    self.okButton.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    self.waitMoreButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.waitMoreButton setTitle:@"Wait! More Options" forState:UIControlStateNormal];
+    [self.view addSubview:self.waitMoreButton];
+    [self.waitMoreButton addTarget:self action:@selector(confirmPage:) forControlEvents:UIControlEventTouchUpInside];
+    self.waitMoreButton.translatesAutoresizingMaskIntoConstraints = NO;
+
+    
     
     [self.view addSubview:self.label];
-    [self.view addSubview:self.button];
+    [self.view addSubview:self.okButton];
+    [self.view addSubview:self.waitMoreButton];
 
     [self setupInitialConstraints];
 }
@@ -51,25 +81,45 @@
 
 - (void) setupInitialConstraints {
     
-    NSDictionary *views = @{ @"label" : self.label,
-                             @"button" : self.button };
+//    NSDictionary *views = @{ @"label" : self.label,
+//                             @"okbutton" : self.okButton,
+//                             };ok
 
     // label
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.f]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0.f]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:30.f]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:200.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1.0f constant:20.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeRight multiplier:1.0f constant:-20.f]];
+    
+ //   [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0.f]];
+    
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:200.f]];
+    
+   // [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:200.f]];
+    
+    
+    
     
     // button
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.okButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.f]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.label attribute:NSLayoutAttributeBottom multiplier:1.0f constant:20.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.okButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.label attribute:NSLayoutAttributeBottom multiplier:1.0f constant:20.f]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:30.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.okButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:30.f]];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:200.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.okButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:200.f]];
+    
+    // Wait
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.waitMoreButton attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.f]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.waitMoreButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.okButton attribute:NSLayoutAttributeBottom multiplier:1.0f constant:20.f]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.waitMoreButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:30.f]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.waitMoreButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:200.f]];
     
     
     
@@ -86,6 +136,13 @@
 
 - (void) nextPage:(id)sender {
     NSLog (@"Next");
+    DetailViewController *det = [[DetailViewController alloc] init];
+    [self.navigationController pushViewController:det animated:YES];
+    
+}
+
+- (void) confirmPage:(id)sender {
+    NSLog (@"Confirm");
     DetailViewController *det = [[DetailViewController alloc] init];
     [self.navigationController pushViewController:det animated:YES];
     
