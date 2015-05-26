@@ -220,4 +220,12 @@
     
 }
 
+- (void) playDing {
+    if (self.audioPlayer) {
+        [self.audioPlayer prepareToPlay];
+        [self.audioPlayer play];
+        
+    }
+}
+
 @end
