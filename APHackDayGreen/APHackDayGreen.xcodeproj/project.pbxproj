@@ -14,7 +14,6 @@
 		511681781B144F1E00D0B1D1 /* icon-font-mobile-app.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681721B144F1E00D0B1D1 /* icon-font-mobile-app.ttf */; };
 		511681791B144F1E00D0B1D1 /* icon-font-mobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681731B144F1E00D0B1D1 /* icon-font-mobile.ttf */; };
 		5116817D1B144F2C00D0B1D1 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5116817C1B144F2C00D0B1D1 /* TTTAttributedLabel.m */; };
-		511681831B14597A00D0B1D1 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511681821B14597A00D0B1D1 /* HomeView.xib */; };
 		511681861B145C5B00D0B1D1 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 511681851B145C5B00D0B1D1 /* UIColor+Extensions.m */; };
 		519B27C21B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
 		519B27C31B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
@@ -54,7 +53,6 @@
 		511681731B144F1E00D0B1D1 /* icon-font-mobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "icon-font-mobile.ttf"; sourceTree = "<group>"; };
 		5116817B1B144F2C00D0B1D1 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		5116817C1B144F2C00D0B1D1 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
-		511681821B14597A00D0B1D1 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		511681841B145C5B00D0B1D1 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extensions.h"; sourceTree = "<group>"; };
 		511681851B145C5B00D0B1D1 /* UIColor+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extensions.m"; sourceTree = "<group>"; };
 		519B27C01B1407C300A00824 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 			children = (
 				511681841B145C5B00D0B1D1 /* UIColor+Extensions.h */,
 				511681851B145C5B00D0B1D1 /* UIColor+Extensions.m */,
-				511681821B14597A00D0B1D1 /* HomeView.xib */,
 				55A38F111B1454700055E094 /* img-address.png */,
 				55A38F0B1B1453C90055E094 /* img-differentAddress@2x.png */,
 				55A38F0C1B1453C90055E094 /* img-mypost@2x.png */,
@@ -277,7 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				511681751B144F1E00D0B1D1 /* APLetter-Light.ttf in Resources */,
-				511681831B14597A00D0B1D1 /* HomeView.xib in Resources */,
 				511681741B144F1E00D0B1D1 /* APLetter-Bold.ttf in Resources */,
 				55A38F101B1453C90055E094 /* img-postoffice@2x.png in Resources */,
 				511681791B144F1E00D0B1D1 /* icon-font-mobile.ttf in Resources */,
