@@ -9,16 +9,16 @@
 #import "DetailViewController.h"
 
 @interface DetailViewController ()
-
+- (void)alignTextforButton : (UIButton *)button;
 @end
 
 @implementation DetailViewController {
     UILabel *instructionLabel;
     UIButton *okButton;
-    UIButton *parcelLockerButton;
-    UIButton *homeButton;
-    UIButton *officeButton;
-    UIButton *otherButton;
+    UIButton *addressButton;
+    UIButton *postOfficeButton;
+    UIButton *differentAddressButton;
+    UIButton *myPostButton;
 }
 
 - (void)loadView {
@@ -36,35 +36,42 @@
     
     instructionLabel = [[UILabel alloc]init];
     okButton = [[UIButton alloc]init];
-    parcelLockerButton = [[UIButton alloc]init];
-    homeButton = [[UIButton alloc]init];
-    officeButton = [[UIButton alloc]init];
-    otherButton = [[UIButton alloc]init];
+    addressButton = [[UIButton alloc]init];
+    postOfficeButton = [[UIButton alloc]init];
+    differentAddressButton = [[UIButton alloc]init];
+    myPostButton = [[UIButton alloc]init];
     
     [instructionLabel setBackgroundColor : [UIColor redColor]];
     [okButton setBackgroundColor : [UIColor yellowColor]];
-    [parcelLockerButton setBackgroundColor : [UIColor purpleColor]];
-    [homeButton setBackgroundColor : [UIColor purpleColor]];
-    [officeButton setBackgroundColor : [UIColor purpleColor]];
-    [otherButton setBackgroundColor : [UIColor purpleColor]];
+    [addressButton setBackgroundColor : [UIColor purpleColor]];
+    [postOfficeButton setBackgroundColor : [UIColor purpleColor]];
+    [differentAddressButton setBackgroundColor : [UIColor purpleColor]];
+    [myPostButton setBackgroundColor : [UIColor purpleColor]];
     
+    [[addressButton titleLabel] setFont : [UIFont systemFontOfSize : 12]];
     
-    [[parcelLockerButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
-    [[homeButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
-    [[officeButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
-    [[otherButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
+    [[addressButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
+    [[postOfficeButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
+    [[differentAddressButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
+    [[myPostButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
 
-    [parcelLockerButton setImage : [UIImage imageNamed : @"img-house"] forState : UIControlStateNormal];
-    [homeButton setImage : [UIImage imageNamed : @"img-house"] forState : UIControlStateNormal];
-    [officeButton setImage : [UIImage imageNamed : @"img-house"] forState : UIControlStateNormal];
-    [otherButton setImage : [UIImage imageNamed : @"img-house"] forState : UIControlStateNormal];
+    [addressButton setImage : [UIImage imageNamed : @"img-address"] forState : UIControlStateNormal];
+    [postOfficeButton setImage : [UIImage imageNamed : @"img-postoffice"] forState : UIControlStateNormal];
+    [differentAddressButton setImage : [UIImage imageNamed : @"img-differentaddress"] forState : UIControlStateNormal];
+    [myPostButton setImage : [UIImage imageNamed : @"img-mypost"] forState : UIControlStateNormal];
+    
+    [addressButton setTitle : @"Leave at the address" forState : UIControlStateNormal];
+    [postOfficeButton setTitle : @"My local Post Office" forState :  UIControlStateNormal];
+    [differentAddressButton setTitle : @"A different address" forState : UIControlStateNormal];
+    [myPostButton setTitle : @"Want more options?\n Log in to MyPost" forState : UIControlStateNormal];
+
     
     [[self view] addSubview : instructionLabel];
     [[self view] addSubview : okButton];
-    [[self view] addSubview : parcelLockerButton];
-    [[self view] addSubview : homeButton];
-    [[self view] addSubview : officeButton];
-    [[self view] addSubview : otherButton];
+    [[self view] addSubview : addressButton];
+    [[self view] addSubview : postOfficeButton];
+    [[self view] addSubview : differentAddressButton];
+    [[self view] addSubview : myPostButton];
     
     // Do any additional setup after loading the view.
 }
@@ -96,21 +103,24 @@
     aRect.size.height = (aButtonRect.size.height - aButtonRect.origin.x) / 2;
     aRect.origin.x = aButtonRect.origin.x;
     aRect.origin.y = aButtonRect.origin.y;
-    [parcelLockerButton setFrame : aRect];
+    [addressButton setFrame : aRect];
 
     aRect.origin.x += (aRect.size.width + aRect.origin.x);
-    [homeButton setFrame : aRect];
+    [postOfficeButton setFrame : aRect];
     
     aRect.origin.y += (aRect.size.height + [okButton frame].origin.x);
-    [otherButton setFrame : aRect];
+    [myPostButton setFrame : aRect];
     
     aRect.origin.x = [okButton frame].origin.x;
-    [officeButton setFrame : aRect];
+    [differentAddressButton setFrame : aRect];
+
+    [self alignTextforButton : addressButton];
+
 }
 
-- (void)setButtons : (NSArray *)value {
-    
+
+- (void)alignTextforButton:(UIButton *)button {
+    button.titleEdgeInsets = UIEdgeInsetsMake(button.imageView.frame.origin.y + button.imageView.bounds.size.height, -button.imageView.frame.size.width, 0, button.imageView.frame.size.width);
+//    button.imageEdgeInsets = UIEdgeInsetsMake(0, button.titleLabel.frame.size.width, 0, -button.titleLabel.frame.size.width);
 }
-
-
 @end
