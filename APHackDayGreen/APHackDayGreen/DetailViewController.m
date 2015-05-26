@@ -1,27 +1,24 @@
 //
-//  HomeViewController.m
+//  DetailViewController.m
 //  APHackDayGreen
 //
 //  Created by Maria La Porta on 26/05/2015.
 //  Copyright (c) 2015 ap. All rights reserved.
 //
 
-#import "HomeViewController.h"
 #import "DetailViewController.h"
 
-@interface HomeViewController ()
+@interface DetailViewController ()
 
 @property (nonatomic, strong) UILabel *label;
-@property (nonatomic, strong) UIButton *button;
-
 
 @end
 
-@implementation HomeViewController
+@implementation DetailViewController
 
 - (void)loadView {
     [super loadView];
-
+    
     self.label = [[UILabel alloc]initWithFrame:CGRectZero];
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -33,18 +30,12 @@
     self.label.textAlignment = NSTextAlignmentCenter;
     [self.label sizeToFit];
     
-    self.label.text = @"Hello World";
+    self.label.text = @"Second page";
     
     
-    self.button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [self.button setTitle:@"Next" forState:UIControlStateNormal];
-    [self.view addSubview:self.button];
-    [self.button addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
-    self.button.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.view addSubview:self.label];
-    [self.view addSubview:self.button];
-
+    
     [self setupInitialConstraints];
 }
 
@@ -52,8 +43,8 @@
 - (void) setupInitialConstraints {
     
     NSDictionary *views = @{ @"label" : self.label,
-                             @"button" : self.button };
-
+                             };
+    
     // label
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.f]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0.f]];
@@ -62,21 +53,13 @@
     
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.label attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:200.f]];
     
-    // button
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.f]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.label attribute:NSLayoutAttributeBottom multiplier:1.0f constant:20.f]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:30.f]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.button attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:200.f]];
-    
     
     
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,11 +67,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) nextPage:(id)sender {
-    NSLog (@"Next");
-    DetailViewController *det = [[DetailViewController alloc] init];
-    [self.navigationController pushViewController:det animated:YES];
-    
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
+*/
 
 @end

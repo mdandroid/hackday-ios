@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		519B27C21B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
+		519B27C31B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
+		519B27C61B14121000A00824 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C51B14121000A00824 /* DetailViewController.m */; };
+		519B27C71B14121000A00824 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C51B14121000A00824 /* DetailViewController.m */; };
 		51EA68631B1400C500675434 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68621B1400C500675434 /* main.m */; };
 		51EA68661B1400C500675434 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68651B1400C500675434 /* AppDelegate.m */; };
 		51EA68691B1400C500675434 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68681B1400C500675434 /* ViewController.m */; };
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		519B27C01B1407C300A00824 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		519B27C11B1407C300A00824 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		519B27C41B14121000A00824 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		519B27C51B14121000A00824 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		51EA685D1B1400C500675434 /* APHackDayGreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APHackDayGreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EA68611B1400C500675434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EA68621B1400C500675434 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +97,10 @@
 				51EA686D1B1400C500675434 /* Images.xcassets */,
 				51EA686F1B1400C500675434 /* LaunchScreen.xib */,
 				51EA68601B1400C500675434 /* Supporting Files */,
+				519B27C01B1407C300A00824 /* HomeViewController.h */,
+				519B27C11B1407C300A00824 /* HomeViewController.m */,
+				519B27C41B14121000A00824 /* DetailViewController.h */,
+				519B27C51B14121000A00824 /* DetailViewController.m */,
 			);
 			path = APHackDayGreen;
 			sourceTree = "<group>";
@@ -219,9 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				519B27C61B14121000A00824 /* DetailViewController.m in Sources */,
 				51EA68691B1400C500675434 /* ViewController.m in Sources */,
 				51EA68661B1400C500675434 /* AppDelegate.m in Sources */,
 				51EA68631B1400C500675434 /* main.m in Sources */,
+				519B27C21B1407C300A00824 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				51EA687D1B1400C500675434 /* APHackDayGreenTests.m in Sources */,
+				519B27C31B1407C300A00824 /* HomeViewController.m in Sources */,
+				519B27C71B14121000A00824 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +434,7 @@
 				51EA68821B1400C500675434 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51EA68831B1400C500675434 /* Build configuration list for PBXNativeTarget "APHackDayGreenTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +443,7 @@
 				51EA68851B1400C500675434 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
