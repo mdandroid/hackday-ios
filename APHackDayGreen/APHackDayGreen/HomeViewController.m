@@ -195,7 +195,7 @@
     [self presentViewController : alertController animated : YES completion : nil];
 }
 
-- (void) confirmPage:(id)sender {
+- (void) nextPage:(id)sender {
     NSLog (@"Confirm");
     DetailViewController *det = [[DetailViewController alloc] init];
     [self.navigationController pushViewController:det animated:YES];
