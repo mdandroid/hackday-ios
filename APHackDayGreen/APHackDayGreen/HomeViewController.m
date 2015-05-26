@@ -22,9 +22,7 @@
 @property (nonatomic, strong) UIButton *waitMoreButton;
 @property (nonatomic, strong) UIImageView *vanImage;
 @property (nonatomic, strong) UIImageView *houseImage;
-@property (nonatomic, strong) UIView *divider;
-@property (nonatomic, strong) UILabel *notifyLabel;
-@property (nonatomic, strong) UILabel *noThanksLabel;
+
 @end
 
 @implementation HomeViewController
@@ -102,7 +100,7 @@
     [self.okButton.layer setCornerRadius:3.f];
     
     [self.okButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateNormal];
- //   [self.okButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
+    [self.okButton addTarget:self action:@selector(okAction:) forControlEvents:UIControlEventTouchUpInside];
     
 
     // Other button
@@ -116,36 +114,7 @@
     [self.waitMoreButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
     [self.waitMoreButton.layer setBorderColor:[UIColor colorWithHexValue:@"dc1928"].CGColor];
     [self.waitMoreButton.layer setBorderWidth:1.f];
-    
-    // Divider
-    self.divider = [[UIView alloc] initWithFrame:CGRectZero];
-    self.divider.backgroundColor = [UIColor colorWithHexValue:@"DFDDDB"];
-    
-    
-    // Label3
-    self.notifyLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    self.notifyLabel.backgroundColor = [UIColor whiteColor];
-    self.notifyLabel.font = [UIFont systemFontOfSize:15.f];
-    self.notifyLabel.textColor = [UIColor colorWithHexValue:@"807370"];
-    self.notifyLabel.text = @"We'll notify you again when we're close by.";
-    self.notifyLabel.numberOfLines = 0;
-    self.notifyLabel.textAlignment = NSTextAlignmentCenter;
-    self.notifyLabel.lineBreakMode = NSLineBreakByWordWrapping;
 
-    
-    // Label3
-    self.noThanksLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    self.noThanksLabel.backgroundColor = [UIColor whiteColor];
-    self.noThanksLabel.font = [UIFont systemFontOfSize:15.f];
-    self.noThanksLabel.textColor = [UIColor colorWithHexValue:@"807370"];
-    self.noThanksLabel.text = @"No thanks";
-    self.noThanksLabel.numberOfLines = 0;
-    self.noThanksLabel.textAlignment = NSTextAlignmentCenter;
-    self.noThanksLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    
-    NSDictionary *underlineAttribute = @{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)};
-    self.noThanksLabel.attributedText = [[NSAttributedString alloc] initWithString:@"No thanks"
-                                                             attributes:underlineAttribute];
     
     
     // Add everything.
@@ -157,9 +126,7 @@
     [self.view addSubview:self.messageContainer];
     [self.view addSubview:self.okButton];
     [self.view addSubview:self.waitMoreButton];
-    [self.view addSubview:self.divider];
-    [self.view addSubview:self.notifyLabel];
-    [self.view addSubview:self.noThanksLabel];
+
 }
 
 - (void)viewWillLayoutSubviews {
@@ -196,14 +163,7 @@
     self.okButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(messageFrame) + 20.f, frame.size.width - 40.f, 42.f));
     
     self.waitMoreButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(self.okButton.frame) + 20.f, frame.size.width - 40.f, 42.f));
-    
-    self.divider.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(self.waitMoreButton.frame) + 20.f, frame.size.width - 40.f, 1.f));
-    
-    CGSize nofitySize = [self.notifyLabel sizeThatFits:CGSizeMake(labelWidth, 0.f)];
-    self.notifyLabel.frame = CGRectIntegral(CGRectMake(20.0f, CGRectGetMaxY(self.divider.frame) + 20.0f, labelWidth, nofitySize.height));
-    
-    CGSize noThanksSize = [self.noThanksLabel sizeThatFits:CGSizeMake(labelWidth, 0.f)];
-    self.noThanksLabel.frame = CGRectIntegral(CGRectMake(20.0f, CGRectGetMaxY(self.notifyLabel.frame) + 5.0f, labelWidth, nofitySize.height));
+
     
 }
 
@@ -212,11 +172,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) nextPage:(id)sender {
-    NSLog (@"Next");
-    DetailViewController *det = [[DetailViewController alloc] init];
-    [self.navigationController pushViewController:det animated:YES];
+- (void) okAction:(id)sender {
+    NSLog (@"ok!");
     
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
+                                                                             message:@"Thanks! We’ll notify you again when we’re close by."
+                                                                     preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Don't notify" style:UIAlertActionStyleDefault handler : ^(UIAlertAction *action) {
+        //
+    }];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+       //
+    }];
+    
+    //add the custom actions
+    [alertController addAction : cancelAction];
+    [alertController addAction : okAction];
+    
+    // show the view controller
+    [self presentViewController : alertController animated : YES completion : nil];
 }
 
 - (void) confirmPage:(id)sender {
