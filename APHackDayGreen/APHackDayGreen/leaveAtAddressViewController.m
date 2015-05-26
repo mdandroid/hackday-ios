@@ -7,19 +7,27 @@
 //
 
 #import "leaveAtAddressViewController.h"
+#import "trackViewController.h"
 
 @interface leaveAtAddressViewController ()
-
+- (void)doDone : (id)sender;
 @end
 
 @implementation leaveAtAddressViewController{
     UIImageView *backgroundButton;
+    UIButton *button;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    button = [[UIButton alloc]init];
     backgroundButton = [[UIImageView alloc]init];
     [backgroundButton setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
+    
+    [button addTarget : self action : @selector(doDone:) forControlEvents :  UIControlEventTouchUpInside];
+    [button setShowsTouchWhenHighlighted : NO];
+    [[self view] addSubview : button];
+    
     [[self view] addSubview : backgroundButton];
     [[self view] setBackgroundColor : [UIColor whiteColor]];
     
@@ -56,6 +64,12 @@
     aRect.origin.y = [[self navigationController] navigationBar].frame.origin.y + [[self navigationController] navigationBar].bounds.size.height;
     aRect.size.height -= aRect.origin.y;
     [backgroundButton setFrame : aRect];
+    [button setFrame : aRect];
+}
+
+- (void)doDone:(id)sender {
+    trackViewController *viewController = [[trackViewController alloc]init];
+    [[self navigationController] pushViewController : viewController animated : YES];
 }
 
 @end
