@@ -44,7 +44,7 @@
     self.audioPlayer.delegate = self;
     
     [self.audioPlayer prepareToPlay];
-
+    [self.audioPlayer play];
     
 
     
@@ -145,9 +145,7 @@
     [self.view addSubview:self.waitMoreButton];
 
 }
-- (void) viewWillAppear:(BOOL)animated {
-        [self.audioPlayer play];
-}
+
 
 - (void)viewWillLayoutSubviews {
     
