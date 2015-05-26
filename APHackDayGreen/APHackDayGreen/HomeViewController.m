@@ -115,22 +115,18 @@
     [self.okButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateNormal];
     [self.okButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
     
-//    self.okButton = [UIButton buttonWithType:UIButtonTypeSystem];
+
+    // Other button
+    self.waitMoreButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.waitMoreButton setTitle:@"Other delivery options" forState:UIControlStateNormal];
+    [self.waitMoreButton.titleLabel setFont:[UIFont fontWithName:@"APLetter-Regular" size:15.f]];
+    [self.waitMoreButton setBackgroundColor:[UIColor colorWithHexValue:@"dc1928"]];
+    [self.waitMoreButton.layer setCornerRadius:3.f];
+    
+    [self.waitMoreButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateNormal];
+    [self.waitMoreButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
     
     
-    //    [self.okButton setTitle:@"OK, I'm home" forState:UIControlStateNormal];
-//    [self.view addSubview:self.okButton];
-//    [self.okButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
-//    self.okButton.translatesAutoresizingMaskIntoConstraints = NO;
-//
-//    self.waitMoreButton = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [self.waitMoreButton setTitle:@"Wait! More Options" forState:UIControlStateNormal];
-//    [self.view addSubview:self.waitMoreButton];
-//    [self.waitMoreButton addTarget:self action:@selector(confirmPage:) forControlEvents:UIControlEventTouchUpInside];
-//    self.waitMoreButton.translatesAutoresizingMaskIntoConstraints = NO;
-//
-//
-//
     [self.messageContainer addSubview:self.label];
     [self.messageContainer addSubview:self.label2];
     [self.messageContainer addSubview:self.label3];
@@ -138,14 +134,7 @@
     [self.messageContainer addSubview:self.houseImage];
     [self.view addSubview:self.messageContainer];
     [self.view addSubview:self.okButton];
-//
-//    [self.buttonContainer addSubview:self.okButton];
-//    [self.buttonContainer addSubview:self.waitMoreButton];
-//    [self.view addSubview:self.buttonContainer];
-//    
-//    
-    
-
+    [self.view addSubview:self.waitMoreButton];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -180,6 +169,8 @@
     self.messageContainer.frame = messageFrame;
     
     self.okButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(messageFrame) + 25.f, frame.size.width - 40.f, 42.f));
+    
+    self.waitMoreButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(self.okButton.frame) + 25.f, frame.size.width - 40.f, 42.f));
     
 }
 
