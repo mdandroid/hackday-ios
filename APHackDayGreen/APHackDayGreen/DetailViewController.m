@@ -8,9 +8,11 @@
 
 #import "DetailViewController.h"
 #import "APHackButton.h"
+#import "selectAPostOfficeViewController.h"
 
 @interface DetailViewController ()
 - (void)alignTextforButton : (UIButton *)button;
+- (void)doPostOffice : (id)sender;
 @end
 
 @implementation DetailViewController {
@@ -63,6 +65,7 @@
     [instructionLabel setTextAlignment : NSTextAlignmentCenter];
     [instructionLabel setText : @"Where would you like your parcel from ASOS delivered instead?"];
 
+    [postOfficeButton addTarget : self action : @selector(doPostOffice:) forControlEvents : UIControlEventTouchUpInside];
     [[self view] addSubview : instructionLabel];
 //    [[self view] addSubview : okButton];
     [[self view] addSubview : addressButton];
@@ -119,6 +122,11 @@
     [super viewWillAppear : animated];
     [self setTitle : @"Redirect delivery"];
     [[[self navigationController] navigationBar] setTintColor : [UIColor redColor]];
+}
+
+- (void)doPostOffice:(id)sender {
+    selectAPostOfficeViewController *viewController = [[selectAPostOfficeViewController alloc]init];
+    [[self navigationController] pushViewController : viewController animated : YES];
 }
 
 @end
