@@ -15,8 +15,9 @@
     if (self) {
         [self setBackgroundColor : [UIColor whiteColor]];
         [self setTitleColor : [UIColor darkGrayColor] forState : UIControlStateNormal];
-        [[self titleLabel] setFont : [UIFont systemFontOfSize : 11]];
+        [[self titleLabel] setFont : [UIFont fontWithName : @"APLetter-Regular" size : 15]];
         [[self titleLabel] setTextAlignment : NSTextAlignmentCenter];
+        [[self titleLabel] setNumberOfLines : 2];
         [[self imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
     }
     return self;
@@ -32,7 +33,7 @@
     self.imageView.frame = frame;
     
     frame = self.titleLabel.frame;
-    frame.origin.x = 10;
+    frame.origin.x = 4;
     frame.origin.y = [self bounds].size.height - frame.size.height - 10;
     frame.size.width = [self bounds].size.width - (frame.origin.x * 2);
     self.titleLabel.frame = frame;
