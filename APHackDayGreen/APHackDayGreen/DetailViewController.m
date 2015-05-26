@@ -58,7 +58,7 @@
     [addressButton setTitle : @"Leave at the\naddress" forState : UIControlStateNormal];
     [postOfficeButton setTitle : @"My local\nPost Office" forState :  UIControlStateNormal];
     [differentAddressButton setTitle : @"A different\naddress" forState : UIControlStateNormal];
-    [myPostButton setTitle : @"Want more options?\nLog in to MyPost" forState : UIControlStateNormal];
+    [myPostButton setTitle : @"Parcel Locker" forState : UIControlStateNormal];
 
     [instructionLabel setNumberOfLines : 3];
     [instructionLabel setLineBreakMode : NSLineBreakByWordWrapping];
