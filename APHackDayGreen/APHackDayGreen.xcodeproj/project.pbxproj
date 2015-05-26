@@ -21,6 +21,8 @@
 		519B27C71B14121000A00824 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C51B14121000A00824 /* DetailViewController.m */; };
 		51D187941B147E5C009F0C6B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D187931B147E5C009F0C6B /* AVFoundation.framework */; };
 		51D187961B147EB9009F0C6B /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51D187951B147EB9009F0C6B /* ding.mp3 */; };
+		51D187991B14917B009F0C6B /* 6PLUStrack-deliver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D187971B14917B009F0C6B /* 6PLUStrack-deliver@2x.png */; };
+		51D1879A1B14917B009F0C6B /* track-deliver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D187981B14917B009F0C6B /* track-deliver@2x.png */; };
 		51EA68631B1400C500675434 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68621B1400C500675434 /* main.m */; };
 		51EA68661B1400C500675434 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68651B1400C500675434 /* AppDelegate.m */; };
 		51EA68691B1400C500675434 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68681B1400C500675434 /* ViewController.m */; };
@@ -79,6 +81,8 @@
 		519B27C51B14121000A00824 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		51D187931B147E5C009F0C6B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		51D187951B147EB9009F0C6B /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
+		51D187971B14917B009F0C6B /* 6PLUStrack-deliver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "6PLUStrack-deliver@2x.png"; path = "page two assets/6PLUStrack-deliver@2x.png"; sourceTree = "<group>"; };
+		51D187981B14917B009F0C6B /* track-deliver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "track-deliver@2x.png"; path = "page two assets/track-deliver@2x.png"; sourceTree = "<group>"; };
 		51EA685D1B1400C500675434 /* APHackDayGreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APHackDayGreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EA68611B1400C500675434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EA68621B1400C500675434 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 		51EA685F1B1400C500675434 /* APHackDayGreen */ = {
 			isa = PBXGroup;
 			children = (
+				51D187971B14917B009F0C6B /* 6PLUStrack-deliver@2x.png */,
+				51D187981B14917B009F0C6B /* track-deliver@2x.png */,
 				55A38F311B148EEB0055E094 /* 6PLUSselect-address-screen@2x.png */,
 				55A38F321B148EEB0055E094 /* 6PLUSselect-parcel-locker-screen@2x.png */,
 				55A38F331B148EEB0055E094 /* select-address@2x.png */,
@@ -354,11 +360,13 @@
 				51EA68711B1400C500675434 /* LaunchScreen.xib in Resources */,
 				55A38F081B14470B0055E094 /* img-van.png in Resources */,
 				55A38F0E1B1453C90055E094 /* img-differentaddress@2x.png in Resources */,
+				51D1879A1B14917B009F0C6B /* track-deliver@2x.png in Resources */,
 				55A38F071B14470B0055E094 /* img-house.png in Resources */,
 				55A38F2A1B148B290055E094 /* leave-screen@2x.png in Resources */,
 				511681781B144F1E00D0B1D1 /* icon-font-mobile-app.ttf in Resources */,
 				511681761B144F1E00D0B1D1 /* APLetter-Medium.ttf in Resources */,
 				55A38F0F1B1453C90055E094 /* img-mypost@2x.png in Resources */,
+				51D187991B14917B009F0C6B /* 6PLUStrack-deliver@2x.png in Resources */,
 				55A38F121B1454700055E094 /* img-address@2x.png in Resources */,
 				55A38F221B1474DE0055E094 /* 6PLUSselect-a-post-office@2x.png in Resources */,
 				55A38F371B148EEB0055E094 /* select-address@2x.png in Resources */,
