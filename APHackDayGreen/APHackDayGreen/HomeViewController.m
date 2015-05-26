@@ -78,29 +78,21 @@
     self.houseImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img-house"]];
     
     
-   // NSRange rangeOfSender = [message rangeOfString:@"ASOS"];
-   // NSRange rangeOfAddress = [message rangeOfString:@"Home"];
+    NSRange range = [message rangeOfString:@"ASOS"];
 
+    UIFont *mainFont = [UIFont fontWithName:@"APLetter-Regular" size:16.f];
+    UIFont *boldFont = [UIFont fontWithName:@"APLetter-Bold" size:16.f];
+    NSMutableAttributedString *aString = [[NSMutableAttributedString alloc]initWithString:message];
 
-    UIFont *mainFont = [UIFont fontWithName:@"APLetter-Regular" size:14.f];;
-    //NSMutableAttributedString *aString = [[NSMutableAttributedString alloc]initWithString:message];
-
-   // [aString addAttribute:NSFontAttributeName value:mainFont range:NSMakeRange(0, aString.length)];
- //   [aString addAttribute:NSFontAttributeName value:[UIFont boldHelveticaFontOfSize:14.f] range:rangeOfPin];
-//    aString addAttribute:NSUnderlineStyleAttributeName value:<#(id)#> range:<#(NSRange)#>
-//    [aString addAttribute:NSForegroundColorAttributeName  value:[UIColor colorWithHexValue:APColourTextFieldBorder] range:NSMakeRange(0, aString.length)];
-//    self.helpInstructionsLabel.attributedText = aString;
-  //  self.label.attributedText = aString;
-
-
- //   self.label.attributedText = @"Hi Sam!\n\n Your parcel from ASOS will be delivered to your Home address today between 12pm - 3pm.";
+    [aString addAttribute:NSFontAttributeName value:mainFont range:NSMakeRange(0, aString.length)];
+    [aString addAttribute:NSFontAttributeName value:boldFont range:range];
+    [aString addAttribute:NSForegroundColorAttributeName  value:[UIColor colorWithHexValue:@"382F2D"] range:NSMakeRange(0, aString.length)];
+    self.label.attributedText = aString;
 
     // MEssage container
     self.messageContainer = [[UIView alloc] initWithFrame:CGRectZero];
     self.messageContainer.backgroundColor = [UIColor colorWithHexValue:@"F3F1EE"];
-    
 
-//
 //    // Buttons
     
     self.okButton = [UIButton buttonWithType:UIButtonTypeCustom];
