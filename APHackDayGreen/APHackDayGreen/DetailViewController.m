@@ -48,6 +48,17 @@
     [officeButton setBackgroundColor : [UIColor purpleColor]];
     [otherButton setBackgroundColor : [UIColor purpleColor]];
     
+    
+    [[parcelLockerButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
+    [[homeButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
+    [[officeButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
+    [[otherButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
+
+    [parcelLockerButton setImage : [UIImage imageNamed : @"img-house"] forState : UIControlStateNormal];
+    [homeButton setImage : [UIImage imageNamed : @"img-house"] forState : UIControlStateNormal];
+    [officeButton setImage : [UIImage imageNamed : @"img-house"] forState : UIControlStateNormal];
+    [otherButton setImage : [UIImage imageNamed : @"img-house"] forState : UIControlStateNormal];
+    
     [[self view] addSubview : instructionLabel];
     [[self view] addSubview : okButton];
     [[self view] addSubview : parcelLockerButton];
