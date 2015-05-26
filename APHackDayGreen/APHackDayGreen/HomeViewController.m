@@ -10,7 +10,7 @@
 #import "DetailViewController.h"
 #import "TTTAttributedLabel.h"
 #import "UIColor+Extensions.h"
-
+#import "okViewController.h"
 
 @interface HomeViewController ()
 
@@ -202,7 +202,8 @@
     }];
     
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-       //
+        okViewController *viewController = [[okViewController alloc]init];
+        [[self navigationController] pushViewController : viewController animated : YES];
     }];
     
     //add the custom actions

@@ -31,7 +31,7 @@
     //#define IS_IPHONE_6_PLUS (fabs((double)[[UIScreen mainScreen]bounds].size.height - (double)736) < DBL_EPSILON)
     //
     BOOL isIphone6 = (fabs((double)[[UIScreen mainScreen]bounds].size.height - (double)667) < DBL_EPSILON);
-    NSString  *imageName = isIphone6 ? @"6PLUSselect-address-screen" : @"select-address";
+    NSString  *imageName = isIphone6 ? @"6PLUStrack-deliver" : @"track-deliver";
     
     [backgroundButton setImage : [UIImage imageNamed : imageName]];
     [backgroundButton setImage : [UIImage imageNamed : imageName]];
@@ -45,7 +45,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear : animated];
-    [self setTitle : @"Select an address"];
+    [self setTitle : @"Track"];
     [[[self navigationController] navigationBar] setTintColor : [UIColor redColor]];
 }
 
