@@ -201,11 +201,11 @@
     messageFrame.size.height = CGRectGetMaxY(self.vanImage.frame);
     self.messageContainer.frame = messageFrame;
     
-    self.okButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(messageFrame) + 25.f, frame.size.width - 40.f, 42.f));
+    self.okButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(messageFrame) + 20.f, frame.size.width - 40.f, 42.f));
     
-    self.waitMoreButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(self.okButton.frame) + 25.f, frame.size.width - 40.f, 42.f));
+    self.waitMoreButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(self.okButton.frame) + 20.f, frame.size.width - 40.f, 42.f));
     
-    self.divider.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(self.waitMoreButton.frame) + 25.f, frame.size.width - 40.f, 1.f));
+    self.divider.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(self.waitMoreButton.frame) + 20.f, frame.size.width - 40.f, 1.f));
     
     CGSize nofitySize = [self.notifyLabel sizeThatFits:CGSizeMake(labelWidth, 0.f)];
     self.notifyLabel.frame = CGRectIntegral(CGRectMake(20.0f, CGRectGetMaxY(self.divider.frame) + 20.0f, labelWidth, nofitySize.height));
