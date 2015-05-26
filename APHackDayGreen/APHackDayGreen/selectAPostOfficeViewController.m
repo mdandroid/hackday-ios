@@ -14,16 +14,20 @@
 @end
 
 @implementation selectAPostOfficeViewController {
-    UIButton *backgroundButton;
+    UIButton *button;
+    UIImageView *backgroundImageView;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    backgroundButton = [[UIButton alloc]init];
-    [backgroundButton addTarget : self action : @selector(doTrack:) forControlEvents :  UIControlEventTouchUpInside];
-    [[backgroundButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
-    [backgroundButton setShowsTouchWhenHighlighted : NO];
-    [[self view] addSubview : backgroundButton];
+    button = [[UIButton alloc]init];
+    backgroundImageView = [[UIImageView alloc]init];
+    
+    [button addTarget : self action : @selector(doTrack:) forControlEvents :  UIControlEventTouchUpInside];
+    [backgroundImageView setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
+    [button setShowsTouchWhenHighlighted : NO];
+    [[self view] addSubview : button];
+     [[self view] addSubview : backgroundImageView];
     [[self view] setBackgroundColor : [UIColor whiteColor]];
     
  //   [[backgroundButton imageView] s
@@ -33,9 +37,8 @@
     NSString  *imageName = isIphone6 ? @"6PLUSselect-a-post-office" : @"select-a-post-office";
     NSLog(imageName);
     
-     [backgroundButton setImage : [UIImage imageNamed : imageName] forState : UIControlStateNormal];
-     [backgroundButton setImage : [UIImage imageNamed : imageName] forState : UIControlStateSelected];
-     [backgroundButton setImage : [UIImage imageNamed : imageName] forState : UIControlStateHighlighted];
+    [backgroundImageView setImage : [UIImage imageNamed : imageName]];
+     [[self view] bringSubviewToFront : button];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,9 +56,11 @@
     [super viewWillLayoutSubviews];
     
     CGRect aRect = [[self view] bounds];
- //   aRect.origin.y = [[self navigationController] navigationBar].frame.origin.y + [[self navigationController] navigationBar].bounds.size.height;
+    aRect.origin.y -= 10;
+    aRect.origin.y = [[self navigationController] navigationBar].frame.origin.y + [[self navigationController] navigationBar].bounds.size.height;
     aRect.size.height -= aRect.origin.y;
-    [backgroundButton setFrame : aRect];
+    [backgroundImageView setFrame : aRect];
+    [button setFrame : aRect];
 }
 
 - (void)doTrack:(id)sender {

@@ -13,14 +13,13 @@
 @end
 
 @implementation trackViewController{
-    UIButton *backgroundButton;
+    UIImageView *backgroundButton;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    backgroundButton = [[UIButton alloc]init];
-    [[backgroundButton imageView] setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
-    [backgroundButton setShowsTouchWhenHighlighted : NO];
+    backgroundButton = [[UIImageView alloc]init];
+    [backgroundButton setContentMode : UIViewContentModeTop | UIViewContentModeScaleAspectFit];
     [[self view] addSubview : backgroundButton];
     [[self view] setBackgroundColor : [UIColor whiteColor]];
     
@@ -33,11 +32,10 @@
 //    
     BOOL isIphone6 = (fabs((double)[[UIScreen mainScreen]bounds].size.height - (double)667) < DBL_EPSILON);
     NSString  *imageName = isIphone6 ? @"6PLUStrack-screen" : @"track-screen";
-    NSLog(imageName);
     
-    [backgroundButton setImage : [UIImage imageNamed : imageName] forState : UIControlStateNormal];
-    [backgroundButton setImage : [UIImage imageNamed : imageName] forState : UIControlStateSelected];
-    [backgroundButton setImage : [UIImage imageNamed : imageName] forState : UIControlStateHighlighted];
+    [backgroundButton setImage : [UIImage imageNamed : imageName]];
+    [backgroundButton setImage : [UIImage imageNamed : imageName]];
+    [backgroundButton setImage : [UIImage imageNamed : imageName]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,7 +53,7 @@
     [super viewWillLayoutSubviews];
     
     CGRect aRect = [[self view] bounds];
-    //   aRect.origin.y = [[self navigationController] navigationBar].frame.origin.y + [[self navigationController] navigationBar].bounds.size.height;
+    aRect.origin.y = [[self navigationController] navigationBar].frame.origin.y + [[self navigationController] navigationBar].bounds.size.height;
     aRect.size.height -= aRect.origin.y;
     [backgroundButton setFrame : aRect];
 }
