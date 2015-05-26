@@ -18,6 +18,8 @@
 		51EA686E1B1400C500675434 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EA686D1B1400C500675434 /* Images.xcassets */; };
 		51EA68711B1400C500675434 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51EA686F1B1400C500675434 /* LaunchScreen.xib */; };
 		51EA687D1B1400C500675434 /* APHackDayGreenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA687C1B1400C500675434 /* APHackDayGreenTests.m */; };
+		55A38F071B14470B0055E094 /* img-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A38F051B14470B0055E094 /* img-house.png */; };
+		55A38F081B14470B0055E094 /* img-van.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A38F061B14470B0055E094 /* img-van.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		51EA68761B1400C500675434 /* APHackDayGreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APHackDayGreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EA687B1B1400C500675434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EA687C1B1400C500675434 /* APHackDayGreenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APHackDayGreenTests.m; sourceTree = "<group>"; };
+		55A38F051B14470B0055E094 /* img-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-house.png"; sourceTree = "<group>"; };
+		55A38F061B14470B0055E094 /* img-van.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-van.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 		51EA685F1B1400C500675434 /* APHackDayGreen */ = {
 			isa = PBXGroup;
 			children = (
+				55A38F051B14470B0055E094 /* img-house.png */,
+				55A38F061B14470B0055E094 /* img-van.png */,
 				51EA68641B1400C500675434 /* AppDelegate.h */,
 				51EA68651B1400C500675434 /* AppDelegate.m */,
 				51EA68671B1400C500675434 /* ViewController.h */,
@@ -213,6 +219,8 @@
 			files = (
 				51EA686C1B1400C500675434 /* Main.storyboard in Resources */,
 				51EA68711B1400C500675434 /* LaunchScreen.xib in Resources */,
+				55A38F081B14470B0055E094 /* img-van.png in Resources */,
+				55A38F071B14470B0055E094 /* img-house.png in Resources */,
 				51EA686E1B1400C500675434 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
