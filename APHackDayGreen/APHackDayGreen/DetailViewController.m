@@ -9,10 +9,12 @@
 #import "DetailViewController.h"
 #import "APHackButton.h"
 #import "selectAPostOfficeViewController.h"
+#import "leaveAtAddressViewController.h"
 
 @interface DetailViewController ()
 - (void)alignTextforButton : (UIButton *)button;
 - (void)doPostOffice : (id)sender;
+- (void)doLeaveAtAddress : (id)sender;
 @end
 
 @implementation DetailViewController {
@@ -63,9 +65,11 @@
     [instructionLabel setNumberOfLines : 3];
     [instructionLabel setLineBreakMode : NSLineBreakByWordWrapping];
     [instructionLabel setTextAlignment : NSTextAlignmentCenter];
-    [instructionLabel setText : @"Where would you like your parcel from ASOS delivered instead?"];
+    [instructionLabel setText : @"Where would you like the parcel delivered instead?"];
 
     [postOfficeButton addTarget : self action : @selector(doPostOffice:) forControlEvents : UIControlEventTouchUpInside];
+    [addressButton    addTarget : self action : @selector(doLeaveAtAddress:) forControlEvents : UIControlEventTouchUpInside];
+    
     [[self view] addSubview : instructionLabel];
 //    [[self view] addSubview : okButton];
     [[self view] addSubview : addressButton];
@@ -108,13 +112,13 @@
     [addressButton setFrame : aRect];
 
     aRect.origin.x += (aRect.size.width + aRect.origin.x);
-    [postOfficeButton setFrame : aRect];
-    
-    aRect.origin.y += (aRect.size.height + [okButton frame].origin.x);
     [myPostButton setFrame : aRect];
     
-    aRect.origin.x = [okButton frame].origin.x;
+    aRect.origin.y += (aRect.size.height + [okButton frame].origin.x);
     [differentAddressButton setFrame : aRect];
+    
+    aRect.origin.x = [okButton frame].origin.x;
+    [postOfficeButton setFrame : aRect];
 
 }
 
@@ -127,6 +131,11 @@
 - (void)doPostOffice:(id)sender {
     selectAPostOfficeViewController *viewController = [[selectAPostOfficeViewController alloc]init];
     [[self navigationController] pushViewController : viewController animated : YES];
+}
+
+- (void)doLeaveAtAddress:(id)sender {
+    leaveAtAddressViewController *viewController = [[leaveAtAddressViewController alloc]init];
+[[self navigationController] pushViewController : viewController animated : YES];
 }
 
 @end
