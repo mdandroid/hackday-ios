@@ -55,9 +55,9 @@
     [differentAddressButton setImage : [UIImage imageNamed : @"img-differentaddress"] forState : UIControlStateNormal];
     [myPostButton setImage : [UIImage imageNamed : @"img-mypost"] forState : UIControlStateNormal];
     
-    [addressButton setTitle : @"Leave at the\naddress" forState : UIControlStateNormal];
-    [postOfficeButton setTitle : @"My local\nPost Office" forState :  UIControlStateNormal];
-    [differentAddressButton setTitle : @"A different\naddress" forState : UIControlStateNormal];
+    [addressButton setTitle : @"Leave at address" forState : UIControlStateNormal];
+    [postOfficeButton setTitle : @"Post Office" forState :  UIControlStateNormal];
+    [differentAddressButton setTitle : @"Personal address" forState : UIControlStateNormal];
     [myPostButton setTitle : @"Parcel Locker" forState : UIControlStateNormal];
 
     [instructionLabel setNumberOfLines : 3];
@@ -97,12 +97,12 @@
     aButtonRect.origin.x = 2;
     aButtonRect.size.width -= (aButtonRect.origin.x * 2);
     aButtonRect.origin.y = [instructionLabel frame].origin.y + [instructionLabel bounds].size.height + aButtonRect.origin.x;
-    aButtonRect.size.height = [okButton frame].origin.y - [okButton frame].origin.x;
+    aButtonRect.size.height = [okButton frame].origin.y - [okButton frame].origin.x - 50;
     aButtonRect.size.height -= aButtonRect.origin.y;
     
     NSInteger buttonCount = 4;
     aRect.size.width = (aButtonRect.size.width - aButtonRect.origin.x) / 2;
-    aRect.size.height = (aButtonRect.size.height - aButtonRect.origin.x) / 2;
+    aRect.size.height = aRect.size.width;
     aRect.origin.x = aButtonRect.origin.x;
     aRect.origin.y = aButtonRect.origin.y;
     [addressButton setFrame : aRect];
