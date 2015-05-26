@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9454F99F-B695-45C2-8C11-1F63D388F348</string>
+	<key>IDESourceControlProjectName</key>
+	<string>APHackDayGreen</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0995F323D9BF2C6E1D18041F0E2D9B0FF4E462F2</key>
+		<string>github.com:mdandroid/hackday-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>APHackDayGreen/APHackDayGreen.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0995F323D9BF2C6E1D18041F0E2D9B0FF4E462F2</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:mdandroid/hackday-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0995F323D9BF2C6E1D18041F0E2D9B0FF4E462F2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0995F323D9BF2C6E1D18041F0E2D9B0FF4E462F2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hackday-ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
