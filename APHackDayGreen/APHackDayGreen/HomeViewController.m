@@ -12,7 +12,7 @@
 #import "UIColor+Extensions.h"
 #import "okViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController () <UIAlertViewDelegate>
 
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, strong) UILabel *label2;
@@ -192,26 +192,41 @@
 
 - (void) okAction:(id)sender {
     NSLog (@"ok!");
+   // NSString *ver = [[self currentDevice] systemVersion];
+   // BOOL isIos7 = [ver floatValue] >= 7.0;
+    if ([UIDevice currentDevice].systemVersion.intValue < 8) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle : @"" message :@"Thanks! We’ll notify you again when we’re close by."
+                                                           delegate : self
+                                                  cancelButtonTitle : @"Don't notify"
+                                                  otherButtonTitles : @"OK", nil];
+
+        [alertView show];
+
+        
+    } else {
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
-                                                                             message:@"Thanks! We’ll notify you again when we’re close by."
-                                                                     preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Don't notify" style:UIAlertActionStyleDefault handler : ^(UIAlertAction *action) {
-        //
-    }];
-    
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        okViewController *viewController = [[okViewController alloc]init];
-        [[self navigationController] pushViewController : viewController animated : YES];
-    }];
-    
-    //add the custom actions
-    [alertController addAction : cancelAction];
-    [alertController addAction : okAction];
-    
-    // show the view controller
-    [self presentViewController : alertController animated : YES completion : nil];
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
+                                                                                 message:@"Thanks! We’ll notify you again when we’re close by."
+                                                                         preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Don't notify" style:UIAlertActionStyleDefault handler : ^(UIAlertAction *action) {
+            //
+        }];
+        
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            okViewController *viewController = [[okViewController alloc]init];
+            [[self navigationController] pushViewController : viewController animated : YES];
+        }];
+        
+        //add the custom actions
+        [alertController addAction : cancelAction];
+        [alertController addAction : okAction];
+        
+        // show the view controller
+        [self presentViewController : alertController animated : YES completion : nil];
+    }
 }
 
 - (void) nextPage:(id)sender {
@@ -228,5 +243,23 @@
         
     }
 }
+
+- (void) alertView : (UIAlertView *)alertView didDismissWithButtonIndex : (NSInteger)buttonIndex {
+
+            
+            // The alert view can either be used for editing the table rows ..
+
+    if (buttonIndex == 0) {
+        // restore the ui
+        
+    } else {
+        okViewController *viewController = [[okViewController alloc]init];
+        [[self navigationController] pushViewController : viewController animated : YES];
+
+    }
+}
+    
+
+
 
 @end
