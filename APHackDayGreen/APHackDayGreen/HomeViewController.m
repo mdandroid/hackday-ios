@@ -102,7 +102,7 @@
     [self.okButton.layer setCornerRadius:3.f];
     
     [self.okButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateNormal];
-    [self.okButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
+ //   [self.okButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
     
 
     // Other button

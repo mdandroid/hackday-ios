@@ -27,9 +27,15 @@
     [[self view] setBackgroundColor : [UIColor whiteColor]];
     
  //   [[backgroundButton imageView] s
-     [backgroundButton setImage : [UIImage imageNamed : @"select-a-post-office"] forState : UIControlStateNormal];
-     [backgroundButton setImage : [UIImage imageNamed : @"select-a-post-office"] forState : UIControlStateSelected];
-     [backgroundButton setImage : [UIImage imageNamed : @"select-a-post-office"] forState : UIControlStateHighlighted];
+    
+    
+    BOOL isIphone6 = (fabs((double)[[UIScreen mainScreen]bounds].size.height - (double)667) < DBL_EPSILON);
+    NSString  *imageName = isIphone6 ? @"6PLUSselect-a-post-office" : @"select-a-post-office";
+    NSLog(imageName);
+    
+     [backgroundButton setImage : [UIImage imageNamed : imageName] forState : UIControlStateNormal];
+     [backgroundButton setImage : [UIImage imageNamed : imageName] forState : UIControlStateSelected];
+     [backgroundButton setImage : [UIImage imageNamed : imageName] forState : UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning {
