@@ -11,6 +11,7 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic, strong) HomeViewController *homeVc;
 @end
 
 @implementation AppDelegate
@@ -21,8 +22,8 @@
     
     
     
-    HomeViewController *home = [[HomeViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:home];
+    self.homeVc = [[HomeViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.homeVc];
 
 
     [self.window setRootViewController:nav];
@@ -41,6 +42,8 @@
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    NSLog(@"Will enter foreground");
+    [self.homeVc playDing];
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 

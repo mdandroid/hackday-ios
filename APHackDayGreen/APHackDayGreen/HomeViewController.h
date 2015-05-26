@@ -11,4 +11,5 @@
 
 @interface HomeViewController : UIViewController <AVAudioPlayerDelegate>
 
+- (void) playDing;
 @end
