@@ -19,6 +19,8 @@
 		519B27C31B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
 		519B27C61B14121000A00824 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C51B14121000A00824 /* DetailViewController.m */; };
 		519B27C71B14121000A00824 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C51B14121000A00824 /* DetailViewController.m */; };
+		51D187941B147E5C009F0C6B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D187931B147E5C009F0C6B /* AVFoundation.framework */; };
+		51D187961B147EB9009F0C6B /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51D187951B147EB9009F0C6B /* ding.mp3 */; };
 		51EA68631B1400C500675434 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68621B1400C500675434 /* main.m */; };
 		51EA68661B1400C500675434 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68651B1400C500675434 /* AppDelegate.m */; };
 		51EA68691B1400C500675434 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68681B1400C500675434 /* ViewController.m */; };
@@ -66,6 +68,8 @@
 		519B27C11B1407C300A00824 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		519B27C41B14121000A00824 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		519B27C51B14121000A00824 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		51D187931B147E5C009F0C6B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		51D187951B147EB9009F0C6B /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
 		51EA685D1B1400C500675434 /* APHackDayGreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APHackDayGreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EA68611B1400C500675434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EA68621B1400C500675434 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51D187941B147E5C009F0C6B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +145,7 @@
 		51EA68541B1400C500675434 = {
 			isa = PBXGroup;
 			children = (
+				51D187931B147E5C009F0C6B /* AVFoundation.framework */,
 				51EA685F1B1400C500675434 /* APHackDayGreen */,
 				51EA68791B1400C500675434 /* APHackDayGreenTests */,
 				51EA685E1B1400C500675434 /* Products */,
@@ -158,6 +164,7 @@
 		51EA685F1B1400C500675434 /* APHackDayGreen */ = {
 			isa = PBXGroup;
 			children = (
+				51D187951B147EB9009F0C6B /* ding.mp3 */,
 				55A38F201B1474DE0055E094 /* 6PLUSselect-a-post-office@2x.png */,
 				55A38F211B1474DE0055E094 /* 6PLUStrack-screen@2x.png */,
 				55A38F1E1B1473A00055E094 /* track-screen@2x.png */,
@@ -316,6 +323,7 @@
 				55A38F0F1B1453C90055E094 /* img-mypost@2x.png in Resources */,
 				55A38F121B1454700055E094 /* img-address@2x.png in Resources */,
 				55A38F221B1474DE0055E094 /* 6PLUSselect-a-post-office@2x.png in Resources */,
+				51D187961B147EB9009F0C6B /* ding.mp3 in Resources */,
 				51EA686E1B1400C500675434 /* Images.xcassets in Resources */,
 				55A38F1F1B1473A00055E094 /* track-screen@2x.png in Resources */,
 				511681771B144F1E00D0B1D1 /* APLetter-Regular.ttf in Resources */,
@@ -478,6 +486,7 @@
 				INFOPLIST_FILE = APHackDayGreen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -488,6 +497,7 @@
 				INFOPLIST_FILE = APHackDayGreen/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

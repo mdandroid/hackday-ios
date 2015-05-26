@@ -23,6 +23,8 @@
 @property (nonatomic, strong) UIImageView *vanImage;
 @property (nonatomic, strong) UIImageView *houseImage;
 
+@property (nonatomic, strong) AVAudioPlayer* audioPlayer;
+
 @end
 
 @implementation HomeViewController
@@ -31,6 +33,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"ding" ofType:@"mp3"];
+    NSURL* file = [[NSURL alloc]  initFileURLWithPath:path];
+    self.audioPlayer = [[AVAudioPlayer alloc]
+                                  initWithContentsOfURL:file error:nil];
+    self.audioPlayer.delegate = self;
+    
+    [self.audioPlayer prepareToPlay];
+
+    
+
+    
     
     self.title = @"Confirm Delivery";
     self.view.backgroundColor = [UIColor whiteColor];
@@ -128,6 +145,9 @@
     [self.view addSubview:self.waitMoreButton];
 
 }
+- (void) viewWillAppear:(BOOL)animated {
+        [self.audioPlayer play];
+}
 
 - (void)viewWillLayoutSubviews {
     
@@ -195,7 +215,7 @@
     [self presentViewController : alertController animated : YES completion : nil];
 }
 
-- (void) confirmPage:(id)sender {
+- (void) nextPage:(id)sender {
     NSLog (@"Confirm");
     DetailViewController *det = [[DetailViewController alloc] init];
     [self.navigationController pushViewController:det animated:YES];

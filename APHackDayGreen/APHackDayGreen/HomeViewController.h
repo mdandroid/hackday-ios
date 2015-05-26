@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioPlayer.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <AVAudioPlayerDelegate>
 
 @end
