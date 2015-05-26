@@ -10,11 +10,15 @@
 #import "APHackButton.h"
 #import "selectAPostOfficeViewController.h"
 #import "leaveAtAddressViewController.h"
+#import "parcelLockerViewController.h"
+#import "personalAddressViewController.h"
 
 @interface DetailViewController ()
 - (void)alignTextforButton : (UIButton *)button;
 - (void)doPostOffice : (id)sender;
 - (void)doLeaveAtAddress : (id)sender;
+- (void)doParcelLocker : (id)sender;
+- (void)doPersonalAddress : (id)sender;
 @end
 
 @implementation DetailViewController {
@@ -69,6 +73,9 @@
 
     [postOfficeButton addTarget : self action : @selector(doPostOffice:) forControlEvents : UIControlEventTouchUpInside];
     [addressButton    addTarget : self action : @selector(doLeaveAtAddress:) forControlEvents : UIControlEventTouchUpInside];
+    [myPostButton     addTarget : self action : @selector(doParcelLocker:) forControlEvents : UIControlEventTouchUpInside];
+    [differentAddressButton addTarget : self action : @selector(doPersonalAddress:) forControlEvents : UIControlEventTouchUpInside];
+    
     
     [[self view] addSubview : instructionLabel];
 //    [[self view] addSubview : okButton];
@@ -138,4 +145,13 @@
 [[self navigationController] pushViewController : viewController animated : YES];
 }
 
+- (void)doParcelLocker:(id)sender {
+    parcelLockerViewController *viewController = [[parcelLockerViewController alloc]init];
+    [[self navigationController] pushViewController : viewController animated : YES];
+}
+
+- (void)doPersonalAddress:(id)sender {
+    personalAddressViewController *viewController = [[personalAddressViewController alloc]init];
+    [[self navigationController] pushViewController : viewController animated : YES];
+}
 @end
