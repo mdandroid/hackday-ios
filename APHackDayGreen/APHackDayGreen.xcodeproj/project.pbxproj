@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511681741B144F1E00D0B1D1 /* APLetter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5116816E1B144F1E00D0B1D1 /* APLetter-Bold.ttf */; };
+		511681751B144F1E00D0B1D1 /* APLetter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5116816F1B144F1E00D0B1D1 /* APLetter-Light.ttf */; };
+		511681761B144F1E00D0B1D1 /* APLetter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681701B144F1E00D0B1D1 /* APLetter-Medium.ttf */; };
+		511681771B144F1E00D0B1D1 /* APLetter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681711B144F1E00D0B1D1 /* APLetter-Regular.ttf */; };
+		511681781B144F1E00D0B1D1 /* icon-font-mobile-app.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681721B144F1E00D0B1D1 /* icon-font-mobile-app.ttf */; };
+		511681791B144F1E00D0B1D1 /* icon-font-mobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681731B144F1E00D0B1D1 /* icon-font-mobile.ttf */; };
+		5116817D1B144F2C00D0B1D1 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5116817C1B144F2C00D0B1D1 /* TTTAttributedLabel.m */; };
 		519B27C21B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
 		519B27C31B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
 		519B27C61B14121000A00824 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C51B14121000A00824 /* DetailViewController.m */; };
@@ -33,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5116816E1B144F1E00D0B1D1 /* APLetter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "APLetter-Bold.ttf"; sourceTree = "<group>"; };
+		5116816F1B144F1E00D0B1D1 /* APLetter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "APLetter-Light.ttf"; sourceTree = "<group>"; };
+		511681701B144F1E00D0B1D1 /* APLetter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "APLetter-Medium.ttf"; sourceTree = "<group>"; };
+		511681711B144F1E00D0B1D1 /* APLetter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "APLetter-Regular.ttf"; sourceTree = "<group>"; };
+		511681721B144F1E00D0B1D1 /* icon-font-mobile-app.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "icon-font-mobile-app.ttf"; sourceTree = "<group>"; };
+		511681731B144F1E00D0B1D1 /* icon-font-mobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "icon-font-mobile.ttf"; sourceTree = "<group>"; };
+		5116817B1B144F2C00D0B1D1 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		5116817C1B144F2C00D0B1D1 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		519B27C01B1407C300A00824 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		519B27C11B1407C300A00824 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		519B27C41B14121000A00824 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -72,6 +87,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5116816D1B144F1E00D0B1D1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5116816E1B144F1E00D0B1D1 /* APLetter-Bold.ttf */,
+				5116816F1B144F1E00D0B1D1 /* APLetter-Light.ttf */,
+				511681701B144F1E00D0B1D1 /* APLetter-Medium.ttf */,
+				511681711B144F1E00D0B1D1 /* APLetter-Regular.ttf */,
+				511681721B144F1E00D0B1D1 /* icon-font-mobile-app.ttf */,
+				511681731B144F1E00D0B1D1 /* icon-font-mobile.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5116817A1B144F2C00D0B1D1 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				5116817B1B144F2C00D0B1D1 /* TTTAttributedLabel.h */,
+				5116817C1B144F2C00D0B1D1 /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
 		51EA68541B1400C500675434 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +130,8 @@
 		51EA685F1B1400C500675434 /* APHackDayGreen */ = {
 			isa = PBXGroup;
 			children = (
+				5116817A1B144F2C00D0B1D1 /* TTTAttributedLabel */,
+				5116816D1B144F1E00D0B1D1 /* Fonts */,
 				55A38F051B14470B0055E094 /* img-house.png */,
 				55A38F061B14470B0055E094 /* img-van.png */,
 				51EA68641B1400C500675434 /* AppDelegate.h */,
@@ -217,11 +256,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				511681751B144F1E00D0B1D1 /* APLetter-Light.ttf in Resources */,
+				511681741B144F1E00D0B1D1 /* APLetter-Bold.ttf in Resources */,
+				511681791B144F1E00D0B1D1 /* icon-font-mobile.ttf in Resources */,
 				51EA686C1B1400C500675434 /* Main.storyboard in Resources */,
 				51EA68711B1400C500675434 /* LaunchScreen.xib in Resources */,
 				55A38F081B14470B0055E094 /* img-van.png in Resources */,
 				55A38F071B14470B0055E094 /* img-house.png in Resources */,
+				511681781B144F1E00D0B1D1 /* icon-font-mobile-app.ttf in Resources */,
+				511681761B144F1E00D0B1D1 /* APLetter-Medium.ttf in Resources */,
 				51EA686E1B1400C500675434 /* Images.xcassets in Resources */,
+				511681771B144F1E00D0B1D1 /* APLetter-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +289,7 @@
 				51EA68661B1400C500675434 /* AppDelegate.m in Sources */,
 				51EA68631B1400C500675434 /* main.m in Sources */,
 				519B27C21B1407C300A00824 /* HomeViewController.m in Sources */,
+				5116817D1B144F2C00D0B1D1 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
