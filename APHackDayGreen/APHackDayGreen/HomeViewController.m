@@ -23,6 +23,8 @@
 @property (nonatomic, strong) UIImageView *vanImage;
 @property (nonatomic, strong) UIImageView *houseImage;
 
+@property (nonatomic, strong) AVAudioPlayer* audioPlayer;
+
 @end
 
 @implementation HomeViewController
@@ -31,6 +33,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"ding" ofType:@"mp3"];
+    NSURL* file = [[NSURL alloc]  initFileURLWithPath:path];
+    self.audioPlayer = [[AVAudioPlayer alloc]
+                                  initWithContentsOfURL:file error:nil];
+    self.audioPlayer.delegate = self;
+    
+    [self.audioPlayer prepareToPlay];
+    [self.audioPlayer play];
+    
+
+    
     
     self.title = @"Confirm Delivery";
     self.view.backgroundColor = [UIColor whiteColor];
