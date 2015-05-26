@@ -22,7 +22,9 @@
 @property (nonatomic, strong) UIButton *waitMoreButton;
 @property (nonatomic, strong) UIImageView *vanImage;
 @property (nonatomic, strong) UIImageView *houseImage;
-
+@property (nonatomic, strong) UIView *divider;
+@property (nonatomic, strong) UILabel *notifyLabel;
+@property (nonatomic, strong) UILabel *noThanksLabel;
 @end
 
 @implementation HomeViewController
@@ -93,11 +95,6 @@
 
  //   self.label.attributedText = @"Hi Sam!\n\n Your parcel from ASOS will be delivered to your Home address today between 12pm - 3pm.";
 
-
-
-
-
-
     // MEssage container
     self.messageContainer = [[UIView alloc] initWithFrame:CGRectZero];
     self.messageContainer.backgroundColor = [UIColor colorWithHexValue:@"F3F1EE"];
@@ -120,13 +117,46 @@
     self.waitMoreButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.waitMoreButton setTitle:@"Other delivery options" forState:UIControlStateNormal];
     [self.waitMoreButton.titleLabel setFont:[UIFont fontWithName:@"APLetter-Regular" size:15.f]];
-    [self.waitMoreButton setBackgroundColor:[UIColor colorWithHexValue:@"dc1928"]];
+    [self.waitMoreButton setBackgroundColor:[UIColor whiteColor]];
     [self.waitMoreButton.layer setCornerRadius:3.f];
-    
+    [self.waitMoreButton setTitleColor:[UIColor colorWithHexValue:@"dc1928"] forState:UIControlStateNormal];
     [self.waitMoreButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateNormal];
     [self.waitMoreButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
+    [self.waitMoreButton.layer setBorderColor:[UIColor colorWithHexValue:@"dc1928"].CGColor];
+    [self.waitMoreButton.layer setBorderWidth:1.f];
+    
+    // Divider
+    self.divider = [[UIView alloc] initWithFrame:CGRectZero];
+    self.divider.backgroundColor = [UIColor colorWithHexValue:@"DFDDDB"];
     
     
+    // Label3
+    self.notifyLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.notifyLabel.backgroundColor = [UIColor whiteColor];
+    self.notifyLabel.font = [UIFont systemFontOfSize:15.f];
+    self.notifyLabel.textColor = [UIColor colorWithHexValue:@"807370"];
+    self.notifyLabel.text = @"We'll notify you again when we're close by.";
+    self.notifyLabel.numberOfLines = 0;
+    self.notifyLabel.textAlignment = NSTextAlignmentCenter;
+    self.notifyLabel.lineBreakMode = NSLineBreakByWordWrapping;
+
+    
+    // Label3
+    self.noThanksLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.noThanksLabel.backgroundColor = [UIColor whiteColor];
+    self.noThanksLabel.font = [UIFont systemFontOfSize:15.f];
+    self.noThanksLabel.textColor = [UIColor colorWithHexValue:@"807370"];
+    self.noThanksLabel.text = @"No thanks";
+    self.noThanksLabel.numberOfLines = 0;
+    self.noThanksLabel.textAlignment = NSTextAlignmentCenter;
+    self.noThanksLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    
+    NSDictionary *underlineAttribute = @{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)};
+    self.noThanksLabel.attributedText = [[NSAttributedString alloc] initWithString:@"No thanks"
+                                                             attributes:underlineAttribute];
+    
+    
+    // Add everything.
     [self.messageContainer addSubview:self.label];
     [self.messageContainer addSubview:self.label2];
     [self.messageContainer addSubview:self.label3];
@@ -135,6 +165,9 @@
     [self.view addSubview:self.messageContainer];
     [self.view addSubview:self.okButton];
     [self.view addSubview:self.waitMoreButton];
+    [self.view addSubview:self.divider];
+    [self.view addSubview:self.notifyLabel];
+    [self.view addSubview:self.noThanksLabel];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -171,6 +204,14 @@
     self.okButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(messageFrame) + 25.f, frame.size.width - 40.f, 42.f));
     
     self.waitMoreButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(self.okButton.frame) + 25.f, frame.size.width - 40.f, 42.f));
+    
+    self.divider.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(self.waitMoreButton.frame) + 25.f, frame.size.width - 40.f, 1.f));
+    
+    CGSize nofitySize = [self.notifyLabel sizeThatFits:CGSizeMake(labelWidth, 0.f)];
+    self.notifyLabel.frame = CGRectIntegral(CGRectMake(20.0f, CGRectGetMaxY(self.divider.frame) + 20.0f, labelWidth, nofitySize.height));
+    
+    CGSize noThanksSize = [self.noThanksLabel sizeThatFits:CGSizeMake(labelWidth, 0.f)];
+    self.noThanksLabel.frame = CGRectIntegral(CGRectMake(20.0f, CGRectGetMaxY(self.notifyLabel.frame) + 5.0f, labelWidth, nofitySize.height));
     
 }
 
