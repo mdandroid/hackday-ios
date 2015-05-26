@@ -14,6 +14,7 @@
 		511681781B144F1E00D0B1D1 /* icon-font-mobile-app.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681721B144F1E00D0B1D1 /* icon-font-mobile-app.ttf */; };
 		511681791B144F1E00D0B1D1 /* icon-font-mobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681731B144F1E00D0B1D1 /* icon-font-mobile.ttf */; };
 		5116817D1B144F2C00D0B1D1 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5116817C1B144F2C00D0B1D1 /* TTTAttributedLabel.m */; };
+		511681811B14558800D0B1D1 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511681801B14558800D0B1D1 /* HomeView.xib */; };
 		519B27C21B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
 		519B27C31B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
 		519B27C61B14121000A00824 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C51B14121000A00824 /* DetailViewController.m */; };
@@ -48,6 +49,7 @@
 		511681731B144F1E00D0B1D1 /* icon-font-mobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "icon-font-mobile.ttf"; sourceTree = "<group>"; };
 		5116817B1B144F2C00D0B1D1 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
 		5116817C1B144F2C00D0B1D1 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		511681801B14558800D0B1D1 /* HomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeView.xib; path = ../HomeView.xib; sourceTree = "<group>"; };
 		519B27C01B1407C300A00824 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		519B27C11B1407C300A00824 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		519B27C41B14121000A00824 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		51EA685F1B1400C500675434 /* APHackDayGreen */ = {
 			isa = PBXGroup;
 			children = (
+				511681801B14558800D0B1D1 /* HomeView.xib */,
 				5116817A1B144F2C00D0B1D1 /* TTTAttributedLabel */,
 				5116816D1B144F1E00D0B1D1 /* Fonts */,
 				55A38F051B14470B0055E094 /* img-house.png */,
@@ -261,6 +264,7 @@
 				511681791B144F1E00D0B1D1 /* icon-font-mobile.ttf in Resources */,
 				51EA686C1B1400C500675434 /* Main.storyboard in Resources */,
 				51EA68711B1400C500675434 /* LaunchScreen.xib in Resources */,
+				511681811B14558800D0B1D1 /* HomeView.xib in Resources */,
 				55A38F081B14470B0055E094 /* img-van.png in Resources */,
 				55A38F071B14470B0055E094 /* img-house.png in Resources */,
 				511681781B144F1E00D0B1D1 /* icon-font-mobile-app.ttf in Resources */,
