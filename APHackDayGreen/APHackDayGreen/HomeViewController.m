@@ -20,7 +20,6 @@
 @property (nonatomic, strong) UIView *messageContainer;
 @property (nonatomic, strong) UIButton *okButton;
 @property (nonatomic, strong) UIButton *waitMoreButton;
-@property (nonatomic, strong) UIView *buttonContainer;
 @property (nonatomic, strong) UIImageView *vanImage;
 @property (nonatomic, strong) UIImageView *houseImage;
 
@@ -104,15 +103,22 @@
     self.messageContainer.backgroundColor = [UIColor colorWithHexValue:@"F3F1EE"];
     
 
-//    // Button Container
-//    self.buttonContainer =[ [UIView alloc] initWithFrame:CGRectZero];
-//    self.buttonContainer.backgroundColor = [UIColor whiteColor
-//                                            ];
-//    self.buttonContainer.translatesAutoresizingMaskIntoConstraints = NO;
 //
 //    // Buttons
+    
+    self.okButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.okButton setTitle:@"OK - I'm there!" forState:UIControlStateNormal];
+    [self.okButton.titleLabel setFont:[UIFont fontWithName:@"APLetter-Regular" size:15.f]];
+    [self.okButton setBackgroundColor:[UIColor colorWithHexValue:@"dc1928"]];
+    [self.okButton.layer setCornerRadius:3.f];
+    
+    [self.okButton setTitleShadowColor:[UIColor clearColor] forState:UIControlStateNormal];
+    [self.okButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
+    
 //    self.okButton = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [self.okButton setTitle:@"OK, I'm home" forState:UIControlStateNormal];
+    
+    
+    //    [self.okButton setTitle:@"OK, I'm home" forState:UIControlStateNormal];
 //    [self.view addSubview:self.okButton];
 //    [self.okButton addTarget:self action:@selector(nextPage:) forControlEvents:UIControlEventTouchUpInside];
 //    self.okButton.translatesAutoresizingMaskIntoConstraints = NO;
@@ -131,6 +137,7 @@
     [self.messageContainer addSubview:self.vanImage];
     [self.messageContainer addSubview:self.houseImage];
     [self.view addSubview:self.messageContainer];
+    [self.view addSubview:self.okButton];
 //
 //    [self.buttonContainer addSubview:self.okButton];
 //    [self.buttonContainer addSubview:self.waitMoreButton];
@@ -171,6 +178,8 @@
     CGRect messageFrame = self.messageContainer.frame;
     messageFrame.size.height = CGRectGetMaxY(self.vanImage.frame);
     self.messageContainer.frame = messageFrame;
+    
+    self.okButton.frame = CGRectIntegral(CGRectMake(20.f, CGRectGetMaxY(messageFrame) + 25.f, frame.size.width - 40.f, 42.f));
     
 }
 
