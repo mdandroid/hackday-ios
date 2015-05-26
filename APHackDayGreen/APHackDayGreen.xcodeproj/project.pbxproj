@@ -7,24 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511681741B144F1E00D0B1D1 /* APLetter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5116816E1B144F1E00D0B1D1 /* APLetter-Bold.ttf */; };
+		511681751B144F1E00D0B1D1 /* APLetter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5116816F1B144F1E00D0B1D1 /* APLetter-Light.ttf */; };
+		511681761B144F1E00D0B1D1 /* APLetter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681701B144F1E00D0B1D1 /* APLetter-Medium.ttf */; };
+		511681771B144F1E00D0B1D1 /* APLetter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681711B144F1E00D0B1D1 /* APLetter-Regular.ttf */; };
+		511681781B144F1E00D0B1D1 /* icon-font-mobile-app.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681721B144F1E00D0B1D1 /* icon-font-mobile-app.ttf */; };
+		511681791B144F1E00D0B1D1 /* icon-font-mobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 511681731B144F1E00D0B1D1 /* icon-font-mobile.ttf */; };
+		5116817D1B144F2C00D0B1D1 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5116817C1B144F2C00D0B1D1 /* TTTAttributedLabel.m */; };
 		519B27C21B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
 		519B27C31B1407C300A00824 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C11B1407C300A00824 /* HomeViewController.m */; };
 		519B27C61B14121000A00824 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C51B14121000A00824 /* DetailViewController.m */; };
 		519B27C71B14121000A00824 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27C51B14121000A00824 /* DetailViewController.m */; };
-		519B27CB1B14416600A00824 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27CA1B14416600A00824 /* TTTAttributedLabel.m */; };
-		519B27CC1B14416600A00824 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 519B27CA1B14416600A00824 /* TTTAttributedLabel.m */; };
-		519B27D41B1443C700A00824 /* APLetter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27CE1B1443C700A00824 /* APLetter-Bold.ttf */; };
-		519B27D51B1443C700A00824 /* APLetter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27CE1B1443C700A00824 /* APLetter-Bold.ttf */; };
-		519B27D61B1443C700A00824 /* APLetter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27CF1B1443C700A00824 /* APLetter-Light.ttf */; };
-		519B27D71B1443C700A00824 /* APLetter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27CF1B1443C700A00824 /* APLetter-Light.ttf */; };
-		519B27D81B1443C700A00824 /* APLetter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27D01B1443C700A00824 /* APLetter-Medium.ttf */; };
-		519B27D91B1443C700A00824 /* APLetter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27D01B1443C700A00824 /* APLetter-Medium.ttf */; };
-		519B27DA1B1443C700A00824 /* APLetter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27D11B1443C700A00824 /* APLetter-Regular.ttf */; };
-		519B27DB1B1443C700A00824 /* APLetter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27D11B1443C700A00824 /* APLetter-Regular.ttf */; };
-		519B27DC1B1443C700A00824 /* icon-font-mobile-app.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27D21B1443C700A00824 /* icon-font-mobile-app.ttf */; };
-		519B27DD1B1443C700A00824 /* icon-font-mobile-app.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27D21B1443C700A00824 /* icon-font-mobile-app.ttf */; };
-		519B27DE1B1443C700A00824 /* icon-font-mobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27D31B1443C700A00824 /* icon-font-mobile.ttf */; };
-		519B27DF1B1443C700A00824 /* icon-font-mobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519B27D31B1443C700A00824 /* icon-font-mobile.ttf */; };
 		51EA68631B1400C500675434 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68621B1400C500675434 /* main.m */; };
 		51EA68661B1400C500675434 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68651B1400C500675434 /* AppDelegate.m */; };
 		51EA68691B1400C500675434 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68681B1400C500675434 /* ViewController.m */; };
@@ -32,6 +25,8 @@
 		51EA686E1B1400C500675434 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EA686D1B1400C500675434 /* Images.xcassets */; };
 		51EA68711B1400C500675434 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51EA686F1B1400C500675434 /* LaunchScreen.xib */; };
 		51EA687D1B1400C500675434 /* APHackDayGreenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA687C1B1400C500675434 /* APHackDayGreenTests.m */; };
+		55A38F071B14470B0055E094 /* img-house.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A38F051B14470B0055E094 /* img-house.png */; };
+		55A38F081B14470B0055E094 /* img-van.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A38F061B14470B0055E094 /* img-van.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,18 +40,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5116816E1B144F1E00D0B1D1 /* APLetter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "APLetter-Bold.ttf"; sourceTree = "<group>"; };
+		5116816F1B144F1E00D0B1D1 /* APLetter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "APLetter-Light.ttf"; sourceTree = "<group>"; };
+		511681701B144F1E00D0B1D1 /* APLetter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "APLetter-Medium.ttf"; sourceTree = "<group>"; };
+		511681711B144F1E00D0B1D1 /* APLetter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "APLetter-Regular.ttf"; sourceTree = "<group>"; };
+		511681721B144F1E00D0B1D1 /* icon-font-mobile-app.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "icon-font-mobile-app.ttf"; sourceTree = "<group>"; };
+		511681731B144F1E00D0B1D1 /* icon-font-mobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "icon-font-mobile.ttf"; sourceTree = "<group>"; };
+		5116817B1B144F2C00D0B1D1 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		5116817C1B144F2C00D0B1D1 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 		519B27C01B1407C300A00824 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		519B27C11B1407C300A00824 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		519B27C41B14121000A00824 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		519B27C51B14121000A00824 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		519B27C91B14416600A00824 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTTAttributedLabel.h; path = TTTAttributedLabel/TTTAttributedLabel.h; sourceTree = "<group>"; };
-		519B27CA1B14416600A00824 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTTAttributedLabel.m; path = TTTAttributedLabel/TTTAttributedLabel.m; sourceTree = "<group>"; };
-		519B27CE1B1443C700A00824 /* APLetter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "APLetter-Bold.ttf"; path = "Fonts/APLetter-Bold.ttf"; sourceTree = "<group>"; };
-		519B27CF1B1443C700A00824 /* APLetter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "APLetter-Light.ttf"; path = "Fonts/APLetter-Light.ttf"; sourceTree = "<group>"; };
-		519B27D01B1443C700A00824 /* APLetter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "APLetter-Medium.ttf"; path = "Fonts/APLetter-Medium.ttf"; sourceTree = "<group>"; };
-		519B27D11B1443C700A00824 /* APLetter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "APLetter-Regular.ttf"; path = "Fonts/APLetter-Regular.ttf"; sourceTree = "<group>"; };
-		519B27D21B1443C700A00824 /* icon-font-mobile-app.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon-font-mobile-app.ttf"; path = "Fonts/icon-font-mobile-app.ttf"; sourceTree = "<group>"; };
-		519B27D31B1443C700A00824 /* icon-font-mobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "icon-font-mobile.ttf"; path = "Fonts/icon-font-mobile.ttf"; sourceTree = "<group>"; };
 		51EA685D1B1400C500675434 /* APHackDayGreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APHackDayGreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EA68611B1400C500675434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EA68621B1400C500675434 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +65,8 @@
 		51EA68761B1400C500675434 /* APHackDayGreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APHackDayGreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EA687B1B1400C500675434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EA687C1B1400C500675434 /* APHackDayGreenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APHackDayGreenTests.m; sourceTree = "<group>"; };
+		55A38F051B14470B0055E094 /* img-house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-house.png"; sourceTree = "<group>"; };
+		55A38F061B14470B0055E094 /* img-van.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "img-van.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,17 +87,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		519B27CD1B14436700A00824 /* Fonts */ = {
+		5116816D1B144F1E00D0B1D1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				519B27CE1B1443C700A00824 /* APLetter-Bold.ttf */,
-				519B27CF1B1443C700A00824 /* APLetter-Light.ttf */,
-				519B27D01B1443C700A00824 /* APLetter-Medium.ttf */,
-				519B27D11B1443C700A00824 /* APLetter-Regular.ttf */,
-				519B27D21B1443C700A00824 /* icon-font-mobile-app.ttf */,
-				519B27D31B1443C700A00824 /* icon-font-mobile.ttf */,
+				5116816E1B144F1E00D0B1D1 /* APLetter-Bold.ttf */,
+				5116816F1B144F1E00D0B1D1 /* APLetter-Light.ttf */,
+				511681701B144F1E00D0B1D1 /* APLetter-Medium.ttf */,
+				511681711B144F1E00D0B1D1 /* APLetter-Regular.ttf */,
+				511681721B144F1E00D0B1D1 /* icon-font-mobile-app.ttf */,
+				511681731B144F1E00D0B1D1 /* icon-font-mobile.ttf */,
 			);
-			name = Fonts;
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5116817A1B144F2C00D0B1D1 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				5116817B1B144F2C00D0B1D1 /* TTTAttributedLabel.h */,
+				5116817C1B144F2C00D0B1D1 /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 		51EA68541B1400C500675434 = {
@@ -124,9 +130,10 @@
 		51EA685F1B1400C500675434 /* APHackDayGreen */ = {
 			isa = PBXGroup;
 			children = (
-				519B27CD1B14436700A00824 /* Fonts */,
-				519B27C91B14416600A00824 /* TTTAttributedLabel.h */,
-				519B27CA1B14416600A00824 /* TTTAttributedLabel.m */,
+				5116817A1B144F2C00D0B1D1 /* TTTAttributedLabel */,
+				5116816D1B144F1E00D0B1D1 /* Fonts */,
+				55A38F051B14470B0055E094 /* img-house.png */,
+				55A38F061B14470B0055E094 /* img-van.png */,
 				51EA68641B1400C500675434 /* AppDelegate.h */,
 				51EA68651B1400C500675434 /* AppDelegate.m */,
 				51EA68671B1400C500675434 /* ViewController.h */,
@@ -249,15 +256,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				519B27DA1B1443C700A00824 /* APLetter-Regular.ttf in Resources */,
-				519B27D61B1443C700A00824 /* APLetter-Light.ttf in Resources */,
-				519B27D41B1443C700A00824 /* APLetter-Bold.ttf in Resources */,
-				519B27D81B1443C700A00824 /* APLetter-Medium.ttf in Resources */,
-				519B27DE1B1443C700A00824 /* icon-font-mobile.ttf in Resources */,
-				519B27DC1B1443C700A00824 /* icon-font-mobile-app.ttf in Resources */,
+				511681751B144F1E00D0B1D1 /* APLetter-Light.ttf in Resources */,
+				511681741B144F1E00D0B1D1 /* APLetter-Bold.ttf in Resources */,
+				511681791B144F1E00D0B1D1 /* icon-font-mobile.ttf in Resources */,
 				51EA686C1B1400C500675434 /* Main.storyboard in Resources */,
 				51EA68711B1400C500675434 /* LaunchScreen.xib in Resources */,
+				55A38F081B14470B0055E094 /* img-van.png in Resources */,
+				55A38F071B14470B0055E094 /* img-house.png in Resources */,
+				511681781B144F1E00D0B1D1 /* icon-font-mobile-app.ttf in Resources */,
+				511681761B144F1E00D0B1D1 /* APLetter-Medium.ttf in Resources */,
 				51EA686E1B1400C500675434 /* Images.xcassets in Resources */,
+				511681771B144F1E00D0B1D1 /* APLetter-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,12 +274,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				519B27DB1B1443C700A00824 /* APLetter-Regular.ttf in Resources */,
-				519B27DD1B1443C700A00824 /* icon-font-mobile-app.ttf in Resources */,
-				519B27D71B1443C700A00824 /* APLetter-Light.ttf in Resources */,
-				519B27D51B1443C700A00824 /* APLetter-Bold.ttf in Resources */,
-				519B27DF1B1443C700A00824 /* icon-font-mobile.ttf in Resources */,
-				519B27D91B1443C700A00824 /* APLetter-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +289,7 @@
 				51EA68661B1400C500675434 /* AppDelegate.m in Sources */,
 				51EA68631B1400C500675434 /* main.m in Sources */,
 				519B27C21B1407C300A00824 /* HomeViewController.m in Sources */,
-				519B27CB1B14416600A00824 /* TTTAttributedLabel.m in Sources */,
+				5116817D1B144F2C00D0B1D1 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +300,6 @@
 				51EA687D1B1400C500675434 /* APHackDayGreenTests.m in Sources */,
 				519B27C31B1407C300A00824 /* HomeViewController.m in Sources */,
 				519B27C71B14121000A00824 /* DetailViewController.m in Sources */,
-				519B27CC1B14416600A00824 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
