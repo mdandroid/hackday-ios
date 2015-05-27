@@ -23,6 +23,9 @@
 		51D187961B147EB9009F0C6B /* ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51D187951B147EB9009F0C6B /* ding.mp3 */; };
 		51D187991B14917B009F0C6B /* 6PLUStrack-deliver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D187971B14917B009F0C6B /* 6PLUStrack-deliver@2x.png */; };
 		51D1879A1B14917B009F0C6B /* track-deliver@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D187981B14917B009F0C6B /* track-deliver@2x.png */; };
+		51D1879D1B153A25009F0C6B /* ConfirmLeaveAtAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D1879C1B153A25009F0C6B /* ConfirmLeaveAtAddressViewController.m */; };
+		51D1879F1B1541F1009F0C6B /* chevron.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D1879E1B1541F1009F0C6B /* chevron.png */; };
+		51D187A21B154544009F0C6B /* DeliveryInstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D187A11B154544009F0C6B /* DeliveryInstructionsViewController.m */; };
 		51EA68631B1400C500675434 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68621B1400C500675434 /* main.m */; };
 		51EA68661B1400C500675434 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68651B1400C500675434 /* AppDelegate.m */; };
 		51EA68691B1400C500675434 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EA68681B1400C500675434 /* ViewController.m */; };
@@ -43,7 +46,6 @@
 		55A38F1F1B1473A00055E094 /* track-screen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A38F1E1B1473A00055E094 /* track-screen@2x.png */; };
 		55A38F221B1474DE0055E094 /* 6PLUSselect-a-post-office@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A38F201B1474DE0055E094 /* 6PLUSselect-a-post-office@2x.png */; };
 		55A38F231B1474DE0055E094 /* 6PLUStrack-screen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A38F211B1474DE0055E094 /* 6PLUStrack-screen@2x.png */; };
-		55A38F261B1486CA0055E094 /* leaveAtAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A38F251B1486CA0055E094 /* leaveAtAddressViewController.m */; };
 		55A38F291B148B290055E094 /* 6PLUSleave-screen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A38F271B148B290055E094 /* 6PLUSleave-screen@2x.png */; };
 		55A38F2A1B148B290055E094 /* leave-screen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A38F281B148B290055E094 /* leave-screen@2x.png */; };
 		55A38F2D1B148D130055E094 /* parcelLockerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A38F2C1B148D130055E094 /* parcelLockerViewController.m */; };
@@ -84,6 +86,11 @@
 		51D187951B147EB9009F0C6B /* ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ding.mp3; sourceTree = "<group>"; };
 		51D187971B14917B009F0C6B /* 6PLUStrack-deliver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "6PLUStrack-deliver@2x.png"; path = "page two assets/6PLUStrack-deliver@2x.png"; sourceTree = "<group>"; };
 		51D187981B14917B009F0C6B /* track-deliver@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "track-deliver@2x.png"; path = "page two assets/track-deliver@2x.png"; sourceTree = "<group>"; };
+		51D1879B1B153A25009F0C6B /* ConfirmLeaveAtAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmLeaveAtAddressViewController.h; sourceTree = "<group>"; };
+		51D1879C1B153A25009F0C6B /* ConfirmLeaveAtAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmLeaveAtAddressViewController.m; sourceTree = "<group>"; };
+		51D1879E1B1541F1009F0C6B /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chevron.png; path = "page two assets/chevron.png"; sourceTree = "<group>"; };
+		51D187A01B154544009F0C6B /* DeliveryInstructionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliveryInstructionsViewController.h; sourceTree = "<group>"; };
+		51D187A11B154544009F0C6B /* DeliveryInstructionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliveryInstructionsViewController.m; sourceTree = "<group>"; };
 		51EA685D1B1400C500675434 /* APHackDayGreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APHackDayGreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EA68611B1400C500675434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EA68621B1400C500675434 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,8 +120,6 @@
 		55A38F1E1B1473A00055E094 /* track-screen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "track-screen@2x.png"; path = "page two assets/track-screen@2x.png"; sourceTree = "<group>"; };
 		55A38F201B1474DE0055E094 /* 6PLUSselect-a-post-office@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "6PLUSselect-a-post-office@2x.png"; path = "page two assets/6PLUSselect-a-post-office@2x.png"; sourceTree = "<group>"; };
 		55A38F211B1474DE0055E094 /* 6PLUStrack-screen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "6PLUStrack-screen@2x.png"; path = "page two assets/6PLUStrack-screen@2x.png"; sourceTree = "<group>"; };
-		55A38F241B1486CA0055E094 /* leaveAtAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leaveAtAddressViewController.h; sourceTree = "<group>"; };
-		55A38F251B1486CA0055E094 /* leaveAtAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leaveAtAddressViewController.m; sourceTree = "<group>"; };
 		55A38F271B148B290055E094 /* 6PLUSleave-screen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "6PLUSleave-screen@2x.png"; path = "page two assets/6PLUSleave-screen@2x.png"; sourceTree = "<group>"; };
 		55A38F281B148B290055E094 /* leave-screen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leave-screen@2x.png"; path = "page two assets/leave-screen@2x.png"; sourceTree = "<group>"; };
 		55A38F2B1B148D130055E094 /* parcelLockerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parcelLockerViewController.h; sourceTree = "<group>"; };
@@ -192,6 +197,7 @@
 		51EA685F1B1400C500675434 /* APHackDayGreen */ = {
 			isa = PBXGroup;
 			children = (
+				51D1879E1B1541F1009F0C6B /* chevron.png */,
 				51D187971B14917B009F0C6B /* 6PLUStrack-deliver@2x.png */,
 				51D187981B14917B009F0C6B /* track-deliver@2x.png */,
 				55A38F311B148EEB0055E094 /* 6PLUSselect-address-screen@2x.png */,
@@ -233,14 +239,16 @@
 				55A38F171B146E250055E094 /* selectAPostOfficeViewController.m */,
 				55A38F1B1B1472B10055E094 /* trackViewController.h */,
 				55A38F1C1B1472B10055E094 /* trackViewController.m */,
-				55A38F241B1486CA0055E094 /* leaveAtAddressViewController.h */,
-				55A38F251B1486CA0055E094 /* leaveAtAddressViewController.m */,
 				55A38F2B1B148D130055E094 /* parcelLockerViewController.h */,
 				55A38F2C1B148D130055E094 /* parcelLockerViewController.m */,
 				55A38F2E1B148D450055E094 /* personalAddressViewController.h */,
 				55A38F2F1B148D450055E094 /* personalAddressViewController.m */,
 				55A38F391B1491650055E094 /* okViewController.h */,
 				55A38F3A1B1491650055E094 /* okViewController.m */,
+				51D1879B1B153A25009F0C6B /* ConfirmLeaveAtAddressViewController.h */,
+				51D1879C1B153A25009F0C6B /* ConfirmLeaveAtAddressViewController.m */,
+				51D187A01B154544009F0C6B /* DeliveryInstructionsViewController.h */,
+				51D187A11B154544009F0C6B /* DeliveryInstructionsViewController.m */,
 			);
 			path = APHackDayGreen;
 			sourceTree = "<group>";
@@ -353,6 +361,7 @@
 			files = (
 				511681751B144F1E00D0B1D1 /* APLetter-Light.ttf in Resources */,
 				511681741B144F1E00D0B1D1 /* APLetter-Bold.ttf in Resources */,
+				51D1879F1B1541F1009F0C6B /* chevron.png in Resources */,
 				55A38F291B148B290055E094 /* 6PLUSleave-screen@2x.png in Resources */,
 				55A38F231B1474DE0055E094 /* 6PLUStrack-screen@2x.png in Resources */,
 				55A38F361B148EEB0055E094 /* 6PLUSselect-parcel-locker-screen@2x.png in Resources */,
@@ -398,7 +407,6 @@
 			files = (
 				519B27C61B14121000A00824 /* DetailViewController.m in Sources */,
 				55A38F2D1B148D130055E094 /* parcelLockerViewController.m in Sources */,
-				55A38F261B1486CA0055E094 /* leaveAtAddressViewController.m in Sources */,
 				51EA68691B1400C500675434 /* ViewController.m in Sources */,
 				55A38F1D1B1472B10055E094 /* trackViewController.m in Sources */,
 				511681861B145C5B00D0B1D1 /* UIColor+Extensions.m in Sources */,
@@ -407,8 +415,10 @@
 				51EA68631B1400C500675434 /* main.m in Sources */,
 				55A38F151B145DE90055E094 /* APHackButton.m in Sources */,
 				55A38F3B1B1491650055E094 /* okViewController.m in Sources */,
+				51D1879D1B153A25009F0C6B /* ConfirmLeaveAtAddressViewController.m in Sources */,
 				519B27C21B1407C300A00824 /* HomeViewController.m in Sources */,
 				55A38F181B146E250055E094 /* selectAPostOfficeViewController.m in Sources */,
+				51D187A21B154544009F0C6B /* DeliveryInstructionsViewController.m in Sources */,
 				5116817D1B144F2C00D0B1D1 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

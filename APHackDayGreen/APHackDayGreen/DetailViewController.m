@@ -9,7 +9,7 @@
 #import "DetailViewController.h"
 #import "APHackButton.h"
 #import "selectAPostOfficeViewController.h"
-#import "leaveAtAddressViewController.h"
+#import "ConfirmLeaveAtAddressViewController.h"
 #import "parcelLockerViewController.h"
 #import "personalAddressViewController.h"
 
@@ -141,7 +141,7 @@
 }
 
 - (void)doLeaveAtAddress:(id)sender {
-    leaveAtAddressViewController *viewController = [[leaveAtAddressViewController alloc]init];
+    ConfirmLeaveAtAddressViewController *viewController = [[ConfirmLeaveAtAddressViewController alloc]init];
 [[self navigationController] pushViewController : viewController animated : YES];
 }
 
