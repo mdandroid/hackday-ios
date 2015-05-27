@@ -52,9 +52,9 @@
     self.title = @"Confirm Delivery";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSString *message = @"Your parcel from ASOS is on board for delivery!";
-    NSString *message2 = @"Our driver will be at:";
-    NSString *message3 = @"123 Smith Street, Fitzroy VIC today between 12:00pm - 3:00pm";
+    NSString *message = @"Your parcel from ASOS will be delivered tomorrow.";
+    NSString *message2 = @"We'll see you at:";
+    NSString *message3 = @"123 Smith Street, Fitzroy VIC Thursday 28 May between 12:00pm - 3:00pm";
     
     self.label = [[UILabel alloc]initWithFrame:CGRectZero];
     self.label.backgroundColor = [UIColor colorWithHexValue:@"F3F1EE"];
@@ -162,7 +162,7 @@
     CGSize label2Size = [self.label2 sizeThatFits:CGSizeMake(labelWidth, 0.f)];
     CGSize label3Size = [self.label3 sizeThatFits:CGSizeMake(labelWidth, 0.f)];
    
-    self.label.frame = CGRectIntegral(CGRectMake(20.0f, 80.0f, label1Size.width, label1Size.height));
+    self.label.frame = CGRectIntegral(CGRectMake(([[self view] bounds].size.width - [self.label bounds].size.width) / 2, 80.0f, label1Size.width, label1Size.height));
     
     self.label2.frame = CGRectIntegral(CGRectMake(20.0f, CGRectGetMaxY(self.label.frame) + 20.0f, labelWidth, label2Size.height));
         
